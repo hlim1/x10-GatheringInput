@@ -1,21 +1,23 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Gathering Input</title>
     <meta charset="UTF-8">
+    <title>Gathering Input</title>
     <script>
       function getName() {
         var fullName;
         fullName = document.getElementById("first").value;
+        fullName += " " + document.getElementById("last").value;
         document.getElementById("message").innerHTML = fullName;
       }
-    </script>  
+    </script>
   </head>
   <body>
     <input type="text" name="First" id="first"/>
-    <input type="text" name="Last" id="first"/>
+    <input type="text" name="Last" id="last"/>
     <button type="button"  id="doneButton" onclick="getName();">Message</button>
 
     <p id="message"></p>
+
   </body>
 </html>
